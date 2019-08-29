@@ -13,11 +13,21 @@
         <a-asset-item id="dolphin-obj" src="https://lh-gva.github.io/blue-gin/assets/dolphin-grey/Mesh_Dolphin.obj"></a-asset-item>
         <a-asset-item id="trout-obj" src="https://lh-gva.github.io/blue-gin/assets/trout-orange/NOVELO_TROUT.obj"></a-asset-item>
       </a-assets>
+<<<<<<< Updated upstream
       <a-marker-camera preset='hiro'>
         <a-entity position='0 1 0' obj-model="obj: #dolphin-obj;" scale="0.001 0.001 0.001"></a-entity>
         <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
         <!-- <a-box position='0 1 0' material='opacity: 0.5;color:blue'></a-box> -->
       </a-marker-camera>
+=======
+      <a-marker type="pattern" url="./assets/pattern-marker.patt">
+      <!-- <a-marker-camera preset='hiro'> -->
+        <a-entity position='0 1 0' obj-model="obj: #dolphin-obj;" scale="0.001 0.001 0.001"></a-entity>
+        <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <!-- <a-box position='0 1 0' material='opacity: 0.5;color:blue'></a-box> -->
+      <!-- </a-marker-camera> -->
+    </a-marker>
+>>>>>>> Stashed changes
     </a-scene>
   </body>
 </html>
