@@ -15,7 +15,7 @@
   </head>
 
   <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs='debugUIEnabled: false; patternRatio: 0.90'>
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; patternRatio: 0.90'>
       <a-assets timeout="10000">
         <a-asset-item id="dolphin-obj" src="https://lh-gva.github.io/blue-gin/assets/dolphin-grey/Mesh_Dolphin.obj"></a-asset-item>
         <a-asset-item id="trout-obj" src="https://lh-gva.github.io/blue-gin/assets/trout-orange/NOVELO_TROUT.obj"></a-asset-item>
@@ -34,7 +34,7 @@
         <a-entity id='fish-4' position='0 0.1 0.45' rotation="0 180 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
 
         <!-- JOHN -->
-        <a-entity position="0 2.25 -15" particle-system="preset: dust; particleCount: 100000; velocityValue: 50 0 0;"></a-entity>
+        <!-- <a-entity position="0 2.25 -15" particle-system="preset: dust; particleCount: 100000; velocityValue: 50 0 0;"></a-entity>
 
         <a-entity light="type: ambient; intensity: .5; color: #aef1ff;"></a-entity>
         <a-entity light="type: directional;
@@ -59,7 +59,7 @@
         </a-tetrahedron>
         <a-text value="fuck you asshole" position="0 .1 -1.5" align="center" rotation="-90 0 0" color="blue"></a-text>
         <a-entity position='0 1 0' obj-model="obj: #dolphin-obj;" scale="0.001 0.001 0.001"></a-entity>
-        <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity> -->
         <!-- <a-box position='0 1 0' material='opacity: 0.5;color:blue'></a-box> -->
 
 
