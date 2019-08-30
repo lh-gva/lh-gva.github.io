@@ -26,17 +26,22 @@
 
 
         <!-- CIO -->
-        <a-entity position='0 1 0' rotation="-90 0 0" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <!-- <a-entity position='0 1 0' rotation="-90 0 0" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity> -->
 
         <!-- JAKOB -->
-        <a-entity id='fish-1' position='0 0.1 0.45' rotation="0 270 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <!-- <a-entity id='fish-1' position='0 0.1 0.45' rotation="0 270 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
         <a-entity id='fish-2' position='0 0.1 0.45' rotation="0 0 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
         <a-entity id='fish-3' position='0 0.1 0.45' rotation="0 90 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
-        <a-entity id='fish-4' position='0 0.1 0.45' rotation="0 180 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <a-entity id='fish-4' position='0 0.1 0.45' rotation="0 180 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity> -->
+
+        <a-entity id='fish-1' position='0 0.3 0.45' rotation="180 270 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-2' position='0 0.3 0.45' rotation="180 0 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-3' position='0 0.3 0.45' rotation="180 90 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-4' position='0 0.3 0.45' rotation="180 180 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/blue-gin/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
 
         <!-- JOHN -->
 
-        <a-image width="1" position="0 .1 -1.5" align="center" rotation="-90 0 0" height="1" src="./assets/glorious_leader.png"></a-image>
+        <a-image width="1" position="0 .1 0" align="center" rotation="-90 0 0" height="1" src="./assets/glorious_leader.png"></a-image>
         <a-sound src="./assets/anthem.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
 
         <a-entity position="0 2.25 -5" particle-system="preset: dust; particleCount: 100000; velocityValue: 50 0 0;"></a-entity>
@@ -62,7 +67,6 @@
             <a-animation attribute="rotation" to="360 0 360" dur="1000" easing="linear"
                          repeat="indefinite"></a-animation>
         </a-tetrahedron>
-        <a-text value="fuck you asshole" position="0 .1 0.75" align="center" rotation="-90 0 0" color="blue"></a-text>
         <!-- <a-entity position='0 1 0' obj-model="obj: #dolphin-obj;" scale="0.001 0.001 0.001"></a-entity> -->
         <!-- <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity> -->
         <!-- <a-box position='0 1 0' material='opacity: 0.5;color:blue'></a-box> -->
@@ -76,22 +80,23 @@
       var fish2 = document.querySelector('#fish-2');
       var fish3 = document.querySelector('#fish-3');
       var fish4 = document.querySelector('#fish-4');
+      const offset = 0.35
       function loop() {
         fish1.object3D.rotation.y = ((((Date.now()*0.027)%360)+270)%360) *(Math.PI/180)
-        fish1.object3D.position.x = 0.45 * Math.cos(fish1.object3D.rotation.y)
-        fish1.object3D.position.z = -0.45 * Math.sin(fish1.object3D.rotation.y)
+        fish1.object3D.position.x = offset * Math.cos(fish1.object3D.rotation.y)
+        fish1.object3D.position.z = -offset * Math.sin(fish1.object3D.rotation.y)
 
         fish2.object3D.rotation.y = ((((Date.now()*0.027)%360)+0)%360) *(Math.PI/180)
-        fish2.object3D.position.x = 0.45 * Math.cos(fish2.object3D.rotation.y)
-        fish2.object3D.position.z = -0.45 * Math.sin(fish2.object3D.rotation.y)
+        fish2.object3D.position.x = offset * Math.cos(fish2.object3D.rotation.y)
+        fish2.object3D.position.z = -offset * Math.sin(fish2.object3D.rotation.y)
 
         fish3.object3D.rotation.y = ((((Date.now()*0.027)%360)+90)%360) *(Math.PI/180)
-        fish3.object3D.position.x = 0.45 * Math.cos(fish3.object3D.rotation.y)
-        fish3.object3D.position.z = -0.45 * Math.sin(fish3.object3D.rotation.y)
+        fish3.object3D.position.x = offset * Math.cos(fish3.object3D.rotation.y)
+        fish3.object3D.position.z = -offset * Math.sin(fish3.object3D.rotation.y)
 
         fish4.object3D.rotation.y = ((((Date.now()*0.027)%360)+180)%360) *(Math.PI/180)
-        fish4.object3D.position.x = 0.45 * Math.cos(fish4.object3D.rotation.y)
-        fish4.object3D.position.z = -0.45 * Math.sin(fish4.object3D.rotation.y)
+        fish4.object3D.position.x = offset * Math.cos(fish4.object3D.rotation.y)
+        fish4.object3D.position.z = -offset * Math.sin(fish4.object3D.rotation.y)
       }
       setInterval(loop, 10)
     </script>
