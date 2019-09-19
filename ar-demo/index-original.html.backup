@@ -1,0 +1,117 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.6/aframe/build/aframe-ar.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+    <meta charset="utf-8">
+    <title>LH GVA AR Demo</title>
+
+    <style>
+
+
+    </style>
+  </head>
+
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+      <!-- <a-assets timeout="10000">
+        <a-asset-item id="dolphin-obj" src="https://lh-gva.github.io/ar-demo/assets/dolphin-grey/Mesh_Dolphin.obj"></a-asset-item>
+        <a-asset-item id="trout-obj" src="https://lh-gva.github.io/ar-demo/assets/trout-orange/NOVELO_TROUT.obj"></a-asset-item>
+      </a-assets> -->
+
+      <a-marker-camera type="pattern" url="./assets/pattern-KPMG-thin-border.patt">
+
+
+
+        <!-- CIO -->
+        <!-- <a-entity position='0 1 0' rotation="-90 0 0" animation-mixer gltf-model="src: url(https://lh-gva.github.io/ar-demo/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity> -->
+
+        <!-- JAKOB -->
+        <!-- <a-entity id='fish-1' position='0 0.1 0.45' rotation="0 270 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <a-entity id='fish-2' position='0 0.1 0.45' rotation="0 0 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <a-entity id='fish-3' position='0 0.1 0.45' rotation="0 90 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity>
+        <a-entity id='fish-4' position='0 0.1 0.45' rotation="0 180 90" obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity> -->
+
+        <a-entity id='fish-1' position='0 0.5 0' rotation="180 270 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/ar-demo/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-2' position='0 0.5 0' rotation="180 0 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/ar-demo/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-3' position='0 0.5 0' rotation="180 90 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/ar-demo/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+        <a-entity id='fish-4' position='0 0.5 0' rotation="180 180 270" animation-mixer gltf-model="src: url(https://lh-gva.github.io/ar-demo/assets/fish-grey/tuna-animated.gltf);" scale="0.1 0.1 0.1"></a-entity>
+
+        <!-- JOHN -->
+
+        <!-- <a-image width="1" position="0 .02 0" align="center" rotation="-90 0 0" height="1" src="./assets/glorious_leader.png"></a-image> -->
+        <!-- <a-image width="1" position="0 .02 0" align="center" rotation="-90 0 0" src="./assets/water.gif"></a-image> -->
+        <!-- <a-entity width="1" position="0 .02 0" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity> -->
+        <a-entity width="1" position="1 .02 0" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="0 .02 1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="-1 .02 0" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="0 .02 -1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="1 .02 1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="1 .02 -1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="-1 .02 1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+        <a-entity width="1" position="-1 .02 -1" align="center" rotation="-90 0 0" height="1"  geometry="primitive:plane" material="shader:gif;src:url(assets/water.gif);" gif=""></a-entity>
+
+        <a-sound src="./assets/fly.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
+
+        <!-- <a-entity position="0 2.25 -5" particle-system="preset: dust; particleCount: 100000; velocityValue: 50 0 0;"></a-entity> -->
+
+        <!-- <a-entity light="type: ambient; intensity: .5; color: #aef1ff;"></a-entity>
+        <a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: .7;
+                   shadowMapHeight: 4096;
+                   shadowMapWidth: 4096;
+                   color: #aef1ff;"
+                  position=".4 3 -.4">
+        </a-entity> -->
+
+        <!-- <a-entity light="type: hemisphere; color: #33C; groundColor: #3C3; intensity: .5"></a-entity>
+
+        <a-portal-door url='https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg' position='0 0 -1' scale='2 1 2' rotation='0 0 0'>
+            <a-animation attribute="rotation" to="0 360 0" dur="10000" easing="linear"
+                         repeat="indefinite"></a-animation>
+        </a-portal-door>
+
+        <a-tetrahedron shadow="cast: true" position="1.5 1 0.75" color="blue" scale=".5 .5 .5">
+            <a-animation attribute="rotation" to="360 0 360" dur="1000" easing="linear"
+                         repeat="indefinite"></a-animation>
+        </a-tetrahedron> -->
+        <!-- <a-entity position='0 1 0' obj-model="obj: #dolphin-obj;" scale="0.001 0.001 0.001"></a-entity> -->
+        <!-- <a-entity position='0 1 0' obj-model="obj: #trout-obj;" scale="0.001 0.001 0.001" material="color:blue"></a-entity> -->
+        <!-- <a-box position='0 1 0' material='opacity: 0.5;color:blue'></a-box> -->
+
+
+      </a-marker-camera>
+    </a-scene>
+
+    <script>
+      var fish1 = document.querySelector('#fish-1');
+      var fish2 = document.querySelector('#fish-2');
+      var fish3 = document.querySelector('#fish-3');
+      var fish4 = document.querySelector('#fish-4');
+      const offset = 0.35
+      function loop() {
+        fish1.object3D.rotation.y = ((((Date.now()*0.027)%360)+270)%360) *(Math.PI/180)
+        fish1.object3D.position.x = offset * Math.cos(fish1.object3D.rotation.y)
+        fish1.object3D.position.z = -offset * Math.sin(fish1.object3D.rotation.y)
+
+        fish2.object3D.rotation.y = ((((Date.now()*0.027)%360)+0)%360) *(Math.PI/180)
+        fish2.object3D.position.x = offset * Math.cos(fish2.object3D.rotation.y)
+        fish2.object3D.position.z = -offset * Math.sin(fish2.object3D.rotation.y)
+
+        fish3.object3D.rotation.y = ((((Date.now()*0.027)%360)+90)%360) *(Math.PI/180)
+        fish3.object3D.position.x = offset * Math.cos(fish3.object3D.rotation.y)
+        fish3.object3D.position.z = -offset * Math.sin(fish3.object3D.rotation.y)
+
+        fish4.object3D.rotation.y = ((((Date.now()*0.027)%360)+180)%360) *(Math.PI/180)
+        fish4.object3D.position.x = offset * Math.cos(fish4.object3D.rotation.y)
+        fish4.object3D.position.z = -offset * Math.sin(fish4.object3D.rotation.y)
+      }
+      setInterval(loop, 10)
+    </script>
+  </body>
+</html>
