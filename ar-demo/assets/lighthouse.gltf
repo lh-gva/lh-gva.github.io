@@ -185,6 +185,7 @@
             }
         },
         {
+            "alphaMode" : "BLEND",
             "doubleSided" : true,
             "name" : "Material.001",
             "pbrMetallicRoughness" : {
@@ -199,6 +200,7 @@
             }
         },
         {
+            "alphaMode" : "BLEND",
             "doubleSided" : true,
             "name" : "Transparent",
             "pbrMetallicRoughness" : {
